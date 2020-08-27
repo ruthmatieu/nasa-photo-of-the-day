@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+
 import SpaceImages from './SpaceImages';
 import SpaceDescriptions from './SpaceDescriptions';
 import Header from './Header';
+import DateContainer from './DateContainer';
 
 import axios from "axios";
-
 function NasaContainer() {
     const [space, setSpace] = useState([]);
 
@@ -26,6 +28,7 @@ function NasaContainer() {
     return (
         <div>
             <Header/>
+            <DateContainer image= {space.url}/>
             <SpaceImages 
                 title = {space.title}
                 date = {space.date}
