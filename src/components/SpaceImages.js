@@ -1,11 +1,13 @@
 import React from 'react';
+import Dropdown from './Dropdown';
 
 function SpaceImages(props) {
     return (
         <div>
+            <Dropdown/>
             <h3>{props.title}</h3>
-            <p>Date: {props.date}</p>
             <img src={props.image} alt={props.title}/>
+            <p>Date: {props.date}</p>
         </div>
     )
 }
